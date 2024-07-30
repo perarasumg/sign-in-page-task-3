@@ -1,0 +1,149 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(135deg, #74ebd5, #acb6e5); */
+    background-image: url("https://c.wallhere.com/photos/ed/74/digital_art-100180.jpg!d");
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari */
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-box h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.user-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.user-box input:focus~label,
+.user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: #74ebd5;
+    font-size: 0.8rem;
+}
+
+button {
+    background: rgba(116, 235, 213, 0.8);
+    border: none;
+    padding: 10px 20px;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: rgba(102, 198, 204, 0.8);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .login-box h2 {
+        font-size: 1.8rem;
+    }
+
+    .user-box input {
+        font-size: 0.9rem;
+    }
+
+    .user-box label {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .login-box {
+        padding: 20px;
+    }
+
+    .login-box h2 {
+        font-size: 1.6rem;
+    }
+
+    .user-box input {
+        font-size: 0.8rem;
+    }
+
+    .user-box label {
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .login-box h2 {
+        font-size: 1.4rem;
+    }
+
+    .user-box input {
+        font-size: 0.7rem;
+    }
+
+    .user-box label {
+        font-size: 0.7rem;
+    }
+
+    button {
+        font-size: 0.7rem;
+        padding: 8px;
+    }
+}
